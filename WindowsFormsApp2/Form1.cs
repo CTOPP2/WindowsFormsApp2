@@ -91,21 +91,28 @@ namespace WindowsFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+			// TODO: This line of code loads data into the 'dataSet1.CTOPP' table. You can move, or remove it, as needed.
+			this.cTOPPTableAdapter.Fill(this.dataSet1.CTOPP);
 			System.Diagnostics.Debug.WriteLine("Git Hub was here..");
 
 			// Testing testing 1, 2, 3
 			// Don't touch
 
-			//Sam C was here....
+			//Sam C was here...
 
 			// Justin was here
-
 			// Justin was here again!
-
 			//shame
-
 			//yoo its working
 			//hidden *igger
         }
-    }
+
+		private void cTOPPBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+		{
+			this.Validate();
+			this.cTOPPBindingSource.EndEdit();
+			this.tableAdapterManager.UpdateAll(this.dataSet1);
+
+		}
+	}
 }
