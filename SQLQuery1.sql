@@ -1,8 +1,4 @@
-﻿CREATE TABLE Elision
-(id int IDENTITY(1,1) PRIMARY KEY,
-percentiile_Rank VARCHAR(40),
-Elision VARCHAR(40),
-Scaled_Score VARCHAR(40),
-Min_Months VARCHAR(40),
-Max_Months VARCHAR(40))
-GO
+﻿bulk insert dbo.CSVUserTestData
+from 'C:\Users\justin.abrau\OneDrive - Aquinas College\2020 Year 12\Computer Tech\Elison Table.csv'
+with (FIRSTROW = 2, fieldterminator = ',', rowterminator = '\n')
+go
