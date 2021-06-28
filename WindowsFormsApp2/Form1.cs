@@ -7,15 +7,76 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp2
 {
 	public partial class Form1 : Form
 	{
+		static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\ac-dc2\student$\Year13\Samuel.Cuanang\GitHub\WindowsFormsApp2\WindowsFormsApp2\Database1.mdf;Integrated Security=True";
+			SqlConnection connection = new SqlConnection(connString);
+
 		public Form1()
 		{
 			InitializeComponent();
-			
+			try
+
+			{
+
+				connection.Open();
+
+				String sql = "select * from Elision";
+
+
+
+				SqlCommand command = new SqlCommand(sql, connection);
+
+
+
+				SqlDataReader reader = command.ExecuteReader();
+
+
+
+				if (reader.HasRows)
+
+				{
+
+					while (reader.Read())
+
+					{
+
+
+
+						string id = reader.GetString(1);
+
+						string percentileRank = reader.GetString(2);
+
+
+
+						Console.WriteLine("id=" + id + ";percentile Rank =" + percentileRank);
+
+
+
+
+
+					}
+
+				}
+
+			}
+
+			catch (Exception err)
+
+			{
+
+
+
+				MessageBox.Show(err.Message);
+
+
+
+			}
 		}
 
 		
