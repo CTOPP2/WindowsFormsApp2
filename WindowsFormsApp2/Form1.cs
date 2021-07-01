@@ -16,67 +16,11 @@ namespace WindowsFormsApp2
 	{
 		static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\ac-dc2\student$\Year13\Samuel.Cuanang\GitHub\WindowsFormsApp2\WindowsFormsApp2\Database1.mdf;Integrated Security=True";
 			SqlConnection connection = new SqlConnection(connString);
-
+		
 		public Form1()
 		{
 			InitializeComponent();
-			try
-
-			{
-
-				connection.Open();
-
-				String sql = "select * from Elision";
-
-
-
-				SqlCommand command = new SqlCommand(sql, connection);
-
-
-
-				SqlDataReader reader = command.ExecuteReader();
-
-
-
-				if (reader.HasRows)
-
-				{
-
-					while (reader.Read())
-
-					{
-
-
-
-						string id = reader.GetString(1);
-
-						string percentileRank = reader.GetString(2);
-
-
-
-						Console.WriteLine("id=" + id + ";percentile Rank =" + percentileRank);
-
-
-
-
-
-					}
-
-				}
-
-			}
-
-			catch (Exception err)
-
-			{
-
-
-
-				MessageBox.Show(err.Message);
-
-
-
-			}
+			
 		}
 
 		
@@ -114,11 +58,12 @@ namespace WindowsFormsApp2
 			long dobM = Birth_Year.Value.Month;
 			long DayY = Exam_Date.Value.Year;
 			long dobY = Birth_Year.Value.Year;
-			
+			//git the daters
 			
 			long Year = (DayY-dobY);
 			long Month = (DayM - dobM);
 			long Day = (DayD - dobD);
+			//make dates math
 			if (Day<0)
 			{
 				Month = Month - 1;
@@ -133,10 +78,10 @@ namespace WindowsFormsApp2
 			{
 				TMonth = 12 + TMonth;
 			}
-
+			//if statements cuz how time works
 			Month_age.Text = TMonth.ToString();
 			Out.Text = Year.ToString();
-	
+			//output
 
 		}
 
@@ -155,6 +100,72 @@ namespace WindowsFormsApp2
 			System.Diagnostics.Debug.WriteLine("Git Hub was here..");
         }
 
+		private void label6_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			try
+
+			{
+
+				connection.Open();
+
+				String sql = "select percentiile_Rank,Elision from Elision where Elision = 27";
+
+
+
+				SqlCommand command = new SqlCommand(sql, connection);
+
+
+
+				SqlDataReader reader = command.ExecuteReader();
+
+
+
+				if (reader.HasRows)
+
+				{
+
+					while (reader.Read())
+
+					{
+
+
+
+						string id = reader.GetString(0);
+
+						string percentileRank = reader.GetString(1);
+
+
+
+						Console.WriteLine("id=" + id + ";percentile Rank =" + percentileRank);
+
+
+
+
+
+					}
+
+				}
+
+			}
+
+			catch (Exception err)
+
+			{
+
+
+
+				MessageBox.Show(err.Message);
+
+
+
+			}
+		}
+
 		//hi justin
-    }
+	}
 }

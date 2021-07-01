@@ -1,0 +1,1 @@
+﻿select percentiile_Rank,Elision from Elision where Elision = 27

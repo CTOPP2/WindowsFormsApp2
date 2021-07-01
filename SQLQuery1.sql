@@ -1,4 +1,4 @@
-﻿bulk insert dbo.CSVUserTestData
-from 'C:\Users\justin.abrau\OneDrive - Aquinas College\2020 Year 12\Computer Tech\Elison Table.csv'
+﻿bulk insert dbo.Elision
+from '\\ac-dc2\student$\year13\samuel.cuanang\GitHub\WindowsFormsApp2\Elison Table.xlsx - Sheet1 (1).csv'
 with (FIRSTROW = 2, fieldterminator = ',', rowterminator = '\n')
 go
