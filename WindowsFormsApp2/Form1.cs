@@ -110,10 +110,9 @@ namespace WindowsFormsApp2
 			try
 
 			{
-
+				string elisionValue = this.Elision_box.Text;
 				connection.Open();
-
-				String sql = "select percentiile_Rank,Elision from Elision where Elision = 27";
+				String sql = "select percentiile_Rank,Elision,Scaled_Score from Elision where Elision = " + elisionValue;
 
 
 
@@ -134,22 +133,22 @@ namespace WindowsFormsApp2
 					{
 
 
-
-						string id = reader.GetString(0);
-
-						string percentileRank = reader.GetString(1);
-
-
-
-						Console.WriteLine("id=" + id + ";percentile Rank =" + percentileRank);
+						string percentileRank = reader.GetString(0);
+						string Elision = reader.GetString(1);
+						string Scaled_Score = reader.GetString(2);
 
 
 
+						Console.WriteLine("Elision=" + Elision + ";percentile Rank =" + percentileRank);
 
+						Percentile_rank_box.Text = percentileRank;
+						Scaled_score_box.Text = Scaled_Score;
+						//Elision_box.Text = Elision;
 
 					}
 
 				}
+				connection.Close();
 
 			}
 

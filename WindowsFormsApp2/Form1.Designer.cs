@@ -48,6 +48,9 @@ namespace WindowsFormsApp2
 			this.label9 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
 			this.button2 = new System.Windows.Forms.Button();
+			this.Percentile_rank_box = new System.Windows.Forms.TextBox();
+			this.Scaled_score_box = new System.Windows.Forms.TextBox();
+			this.Elision_box = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// Exam_Date
@@ -139,7 +142,7 @@ namespace WindowsFormsApp2
 			// label6
 			// 
 			this.label6.AutoSize = true;
-			this.label6.Location = new System.Drawing.Point(9, 174);
+			this.label6.Location = new System.Drawing.Point(12, 177);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(37, 13);
 			this.label6.TabIndex = 18;
@@ -183,7 +186,7 @@ namespace WindowsFormsApp2
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(220, 201);
+			this.button2.Location = new System.Drawing.Point(99, 217);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 23;
@@ -191,11 +194,35 @@ namespace WindowsFormsApp2
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
+			// Percentile_rank_box
+			// 
+			this.Percentile_rank_box.Location = new System.Drawing.Point(149, 174);
+			this.Percentile_rank_box.Name = "Percentile_rank_box";
+			this.Percentile_rank_box.Size = new System.Drawing.Size(54, 20);
+			this.Percentile_rank_box.TabIndex = 25;
+			// 
+			// Scaled_score_box
+			// 
+			this.Scaled_score_box.Location = new System.Drawing.Point(227, 174);
+			this.Scaled_score_box.Name = "Scaled_score_box";
+			this.Scaled_score_box.Size = new System.Drawing.Size(54, 20);
+			this.Scaled_score_box.TabIndex = 26;
+			// 
+			// Elision_box
+			// 
+			this.Elision_box.Location = new System.Drawing.Point(75, 174);
+			this.Elision_box.Name = "Elision_box";
+			this.Elision_box.Size = new System.Drawing.Size(54, 20);
+			this.Elision_box.TabIndex = 27;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(926, 399);
+			this.Controls.Add(this.Elision_box);
+			this.Controls.Add(this.Scaled_score_box);
+			this.Controls.Add(this.Percentile_rank_box);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label9);
@@ -238,6 +265,9 @@ namespace WindowsFormsApp2
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.TextBox Percentile_rank_box;
+		private System.Windows.Forms.TextBox Scaled_score_box;
+		private System.Windows.Forms.TextBox Elision_box;
 	}
 }
 
