@@ -165,6 +165,31 @@ namespace WindowsFormsApp2
 			}
 		}
 
+		private void label11_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label17_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label20_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label19_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label21_Click(object sender, EventArgs e)
+		{
+
+		}
+
 		//hi justin
 	}
 }

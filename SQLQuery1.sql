@@ -1,4 +1,4 @@
-﻿bulk insert dbo.Elision
-from '\\ac-dc2\student$\year13\samuel.cuanang\GitHub\WindowsFormsApp2\Elison Table.xlsx - Sheet1 (1).csv'
+﻿bulk insert dbo.blendedwords
+from 'H:\GitHub\WindowsFormsApp2\blendedWords - Sheet1.csv'
 with (FIRSTROW = 2, fieldterminator = ',', rowterminator = '\n')
 go
