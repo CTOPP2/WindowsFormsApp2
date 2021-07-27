@@ -50,15 +50,15 @@ namespace WindowsFormsApp2
 			this.button2 = new System.Windows.Forms.Button();
 			this.Percentile_rank_box = new System.Windows.Forms.TextBox();
 			this.Scaled_score_box = new System.Windows.Forms.TextBox();
-			this.Elision_box = new System.Windows.Forms.TextBox();
+			this.Elision_raw_box = new System.Windows.Forms.TextBox();
 			this.label11 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
-			this.textBox4 = new System.Windows.Forms.TextBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.phoneme_scaled = new System.Windows.Forms.TextBox();
+			this.phoneme_percentile = new System.Windows.Forms.TextBox();
+			this.phoneme_box = new System.Windows.Forms.TextBox();
+			this.blended_scale = new System.Windows.Forms.TextBox();
+			this.blended_percentile = new System.Windows.Forms.TextBox();
+			this.Blended_raw_box = new System.Windows.Forms.TextBox();
 			this.label13 = new System.Windows.Forms.Label();
 			this.label14 = new System.Windows.Forms.Label();
 			this.label15 = new System.Windows.Forms.Label();
@@ -243,12 +243,12 @@ namespace WindowsFormsApp2
 			this.Scaled_score_box.Size = new System.Drawing.Size(54, 20);
 			this.Scaled_score_box.TabIndex = 26;
 			// 
-			// Elision_box
+			// Elision_raw_box
 			// 
-			this.Elision_box.Location = new System.Drawing.Point(130, 220);
-			this.Elision_box.Name = "Elision_box";
-			this.Elision_box.Size = new System.Drawing.Size(54, 20);
-			this.Elision_box.TabIndex = 27;
+			this.Elision_raw_box.Location = new System.Drawing.Point(130, 220);
+			this.Elision_raw_box.Name = "Elision_raw_box";
+			this.Elision_raw_box.Size = new System.Drawing.Size(54, 20);
+			this.Elision_raw_box.TabIndex = 27;
 			// 
 			// label11
 			// 
@@ -269,47 +269,47 @@ namespace WindowsFormsApp2
 			this.label12.TabIndex = 29;
 			this.label12.Text = "Phoneme Isolation";
 			// 
-			// textBox1
+			// phoneme_scaled
 			// 
-			this.textBox1.Location = new System.Drawing.Point(301, 287);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(54, 20);
-			this.textBox1.TabIndex = 30;
+			this.phoneme_scaled.Location = new System.Drawing.Point(301, 287);
+			this.phoneme_scaled.Name = "phoneme_scaled";
+			this.phoneme_scaled.Size = new System.Drawing.Size(54, 20);
+			this.phoneme_scaled.TabIndex = 30;
 			// 
-			// textBox2
+			// phoneme_percentile
 			// 
-			this.textBox2.Location = new System.Drawing.Point(216, 287);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(54, 20);
-			this.textBox2.TabIndex = 31;
+			this.phoneme_percentile.Location = new System.Drawing.Point(216, 287);
+			this.phoneme_percentile.Name = "phoneme_percentile";
+			this.phoneme_percentile.Size = new System.Drawing.Size(54, 20);
+			this.phoneme_percentile.TabIndex = 31;
 			// 
-			// textBox3
+			// phoneme_box
 			// 
-			this.textBox3.Location = new System.Drawing.Point(130, 287);
-			this.textBox3.Name = "textBox3";
-			this.textBox3.Size = new System.Drawing.Size(54, 20);
-			this.textBox3.TabIndex = 32;
+			this.phoneme_box.Location = new System.Drawing.Point(130, 287);
+			this.phoneme_box.Name = "phoneme_box";
+			this.phoneme_box.Size = new System.Drawing.Size(54, 20);
+			this.phoneme_box.TabIndex = 32;
 			// 
-			// textBox4
+			// blended_scale
 			// 
-			this.textBox4.Location = new System.Drawing.Point(301, 253);
-			this.textBox4.Name = "textBox4";
-			this.textBox4.Size = new System.Drawing.Size(54, 20);
-			this.textBox4.TabIndex = 33;
+			this.blended_scale.Location = new System.Drawing.Point(301, 253);
+			this.blended_scale.Name = "blended_scale";
+			this.blended_scale.Size = new System.Drawing.Size(54, 20);
+			this.blended_scale.TabIndex = 33;
 			// 
-			// textBox5
+			// blended_percentile
 			// 
-			this.textBox5.Location = new System.Drawing.Point(216, 253);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(54, 20);
-			this.textBox5.TabIndex = 34;
+			this.blended_percentile.Location = new System.Drawing.Point(216, 253);
+			this.blended_percentile.Name = "blended_percentile";
+			this.blended_percentile.Size = new System.Drawing.Size(54, 20);
+			this.blended_percentile.TabIndex = 34;
 			// 
-			// textBox6
+			// Blended_raw_box
 			// 
-			this.textBox6.Location = new System.Drawing.Point(130, 253);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(54, 20);
-			this.textBox6.TabIndex = 35;
+			this.Blended_raw_box.Location = new System.Drawing.Point(130, 253);
+			this.Blended_raw_box.Name = "Blended_raw_box";
+			this.Blended_raw_box.Size = new System.Drawing.Size(54, 20);
+			this.Blended_raw_box.TabIndex = 35;
 			// 
 			// label13
 			// 
@@ -556,15 +556,15 @@ namespace WindowsFormsApp2
 			this.Controls.Add(this.label15);
 			this.Controls.Add(this.label14);
 			this.Controls.Add(this.label13);
-			this.Controls.Add(this.textBox6);
-			this.Controls.Add(this.textBox5);
-			this.Controls.Add(this.textBox4);
-			this.Controls.Add(this.textBox3);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.Blended_raw_box);
+			this.Controls.Add(this.blended_percentile);
+			this.Controls.Add(this.blended_scale);
+			this.Controls.Add(this.phoneme_box);
+			this.Controls.Add(this.phoneme_percentile);
+			this.Controls.Add(this.phoneme_scaled);
 			this.Controls.Add(this.label12);
 			this.Controls.Add(this.label11);
-			this.Controls.Add(this.Elision_box);
+			this.Controls.Add(this.Elision_raw_box);
 			this.Controls.Add(this.Scaled_score_box);
 			this.Controls.Add(this.Percentile_rank_box);
 			this.Controls.Add(this.button2);
@@ -611,15 +611,15 @@ namespace WindowsFormsApp2
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.TextBox Percentile_rank_box;
 		private System.Windows.Forms.TextBox Scaled_score_box;
-		private System.Windows.Forms.TextBox Elision_box;
+		private System.Windows.Forms.TextBox Elision_raw_box;
 		private System.Windows.Forms.Label label11;
 		private System.Windows.Forms.Label label12;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox3;
-		private System.Windows.Forms.TextBox textBox4;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.TextBox phoneme_scaled;
+		private System.Windows.Forms.TextBox phoneme_percentile;
+		private System.Windows.Forms.TextBox phoneme_box;
+		private System.Windows.Forms.TextBox blended_scale;
+		private System.Windows.Forms.TextBox blended_percentile;
+		private System.Windows.Forms.TextBox Blended_raw_box;
 		private System.Windows.Forms.Label label13;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label label15;

@@ -107,10 +107,11 @@ namespace WindowsFormsApp2
 
 		private void button2_Click(object sender, EventArgs e)
 		{
+			// Elison
 			try
 
 			{
-				string elisionValue = this.Elision_box.Text;
+				string elisionValue = this.Elision_raw_box.Text;
 				connection.Open();
 				String sql = "select percentiile_Rank,Elision,Scaled_Score from Elision where Elision = " + elisionValue;
 
@@ -143,6 +144,177 @@ namespace WindowsFormsApp2
 
 						Percentile_rank_box.Text = percentileRank;
 						Scaled_score_box.Text = Scaled_Score;
+						//Elision_box.Text = Elision;
+
+					}
+
+				}
+				connection.Close();
+
+			}
+
+			catch (Exception err)
+
+			{
+
+
+
+				MessageBox.Show(err.Message);
+
+
+
+			}
+
+			//Blended words
+			try
+
+			{
+				string blendedvalue = this.Blended_raw_box.Text;
+				connection.Open();
+				String sql = "select percenile_rank,Blending_Words,Scaled_Score from blendingwords where Blending_Words = " + blendedvalue;
+
+
+
+				SqlCommand command = new SqlCommand(sql, connection);
+
+
+
+				SqlDataReader reader = command.ExecuteReader();
+
+
+
+				if (reader.HasRows)
+
+				{
+
+					while (reader.Read())
+
+					{
+
+
+						string percentileRank = reader.GetString(0);
+						string blended = reader.GetString(1);
+						string Scaled_Score = reader.GetString(2);
+
+
+
+						Console.WriteLine("Elision=" + blended + ";percentile Rank =" + percentileRank);
+
+						blended_percentile.Text = percentileRank;
+						blended_scale.Text = Scaled_Score;
+						//Elision_box.Text = Elision;
+
+					}
+
+				}
+				connection.Close();
+
+			}
+
+			catch (Exception err)
+
+			{
+
+
+
+				MessageBox.Show(err.Message);
+
+
+
+			}
+			//phoneme
+			try
+
+			{
+				string phonemevalue = this.phoneme_box.Text;
+				connection.Open();
+				String sql = "select Percentile_Rank,Phoneme_Isolation,Scaled_Score from phoneme_iso where Phoneme_Isolation = " + phonemevalue;
+
+
+
+				SqlCommand command = new SqlCommand(sql, connection);
+
+
+
+				SqlDataReader reader = command.ExecuteReader();
+
+
+
+				if (reader.HasRows)
+
+				{
+
+					while (reader.Read())
+
+					{
+
+
+						string percentileRank = reader.GetString(0);
+						string phoneme = reader.GetString(1);
+						string Scaled_Score = reader.GetString(2);
+
+
+
+						Console.WriteLine("Elision=" + phoneme + ";percentile Rank =" + percentileRank);
+
+						phoneme_percentile.Text = percentileRank;
+						phoneme_scaled.Text = Scaled_Score;
+						//Elision_box.Text = Elision;
+
+					}
+
+				}
+				connection.Close();
+
+			}
+
+			catch (Exception err)
+
+			{
+
+
+
+				MessageBox.Show(err.Message);
+
+
+
+			}
+			try
+
+			{
+				string memorydigitvalue = this.phoneme_box.Text;
+				connection.Open();
+				String sql = "select Percentile_Rank,Phoneme_Isolation,Scaled_Score from phoneme_iso where Phoneme_Isolation = " + phonemevalue;
+
+
+
+				SqlCommand command = new SqlCommand(sql, connection);
+
+
+
+				SqlDataReader reader = command.ExecuteReader();
+
+
+
+				if (reader.HasRows)
+
+				{
+
+					while (reader.Read())
+
+					{
+
+
+						string percentileRank = reader.GetString(0);
+						string phoneme = reader.GetString(1);
+						string Scaled_Score = reader.GetString(2);
+
+
+
+						Console.WriteLine("Elision=" + phoneme + ";percentile Rank =" + percentileRank);
+
+						phoneme_percentile.Text = percentileRank;
+						phoneme_scaled.Text = Scaled_Score;
 						//Elision_box.Text = Elision;
 
 					}
