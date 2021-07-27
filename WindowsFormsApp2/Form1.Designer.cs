@@ -65,24 +65,24 @@ namespace WindowsFormsApp2
 			this.label16 = new System.Windows.Forms.Label();
 			this.label17 = new System.Windows.Forms.Label();
 			this.label18 = new System.Windows.Forms.Label();
-			this.textBox7 = new System.Windows.Forms.TextBox();
-			this.textBox8 = new System.Windows.Forms.TextBox();
-			this.textBox9 = new System.Windows.Forms.TextBox();
-			this.textBox10 = new System.Windows.Forms.TextBox();
-			this.textBox11 = new System.Windows.Forms.TextBox();
-			this.textBox12 = new System.Windows.Forms.TextBox();
+			this.memory_scaled = new System.Windows.Forms.TextBox();
+			this.nonword_scaled = new System.Windows.Forms.TextBox();
+			this.nonword_percentile = new System.Windows.Forms.TextBox();
+			this.nonword_box = new System.Windows.Forms.TextBox();
+			this.memory_percentile = new System.Windows.Forms.TextBox();
+			this.memory_digit_box = new System.Windows.Forms.TextBox();
 			this.textBox13 = new System.Windows.Forms.TextBox();
 			this.textBox14 = new System.Windows.Forms.TextBox();
 			this.textBox15 = new System.Windows.Forms.TextBox();
 			this.textBox16 = new System.Windows.Forms.TextBox();
 			this.textBox17 = new System.Windows.Forms.TextBox();
 			this.textBox18 = new System.Windows.Forms.TextBox();
-			this.textBox19 = new System.Windows.Forms.TextBox();
-			this.textBox20 = new System.Windows.Forms.TextBox();
-			this.textBox21 = new System.Windows.Forms.TextBox();
-			this.textBox22 = new System.Windows.Forms.TextBox();
-			this.textBox23 = new System.Windows.Forms.TextBox();
-			this.textBox24 = new System.Windows.Forms.TextBox();
+			this.ScaledSegmentingNonwords = new System.Windows.Forms.TextBox();
+			this.PercentSegmentingNonwords = new System.Windows.Forms.TextBox();
+			this.RawSegmentingNonwords = new System.Windows.Forms.TextBox();
+			this.scaledblendnonwords = new System.Windows.Forms.TextBox();
+			this.percentblendnonwords = new System.Windows.Forms.TextBox();
+			this.rawblendnonwords = new System.Windows.Forms.TextBox();
 			this.label19 = new System.Windows.Forms.Label();
 			this.label20 = new System.Windows.Forms.Label();
 			this.label21 = new System.Windows.Forms.Label();
@@ -366,47 +366,47 @@ namespace WindowsFormsApp2
 			this.label18.TabIndex = 41;
 			this.label18.Text = "Memory for Digits";
 			// 
-			// textBox7
+			// memory_scaled
 			// 
-			this.textBox7.Location = new System.Drawing.Point(301, 326);
-			this.textBox7.Name = "textBox7";
-			this.textBox7.Size = new System.Drawing.Size(54, 20);
-			this.textBox7.TabIndex = 42;
+			this.memory_scaled.Location = new System.Drawing.Point(301, 326);
+			this.memory_scaled.Name = "memory_scaled";
+			this.memory_scaled.Size = new System.Drawing.Size(54, 20);
+			this.memory_scaled.TabIndex = 42;
 			// 
-			// textBox8
+			// nonword_scaled
 			// 
-			this.textBox8.Location = new System.Drawing.Point(301, 371);
-			this.textBox8.Name = "textBox8";
-			this.textBox8.Size = new System.Drawing.Size(54, 20);
-			this.textBox8.TabIndex = 43;
+			this.nonword_scaled.Location = new System.Drawing.Point(301, 371);
+			this.nonword_scaled.Name = "nonword_scaled";
+			this.nonword_scaled.Size = new System.Drawing.Size(54, 20);
+			this.nonword_scaled.TabIndex = 43;
 			// 
-			// textBox9
+			// nonword_percentile
 			// 
-			this.textBox9.Location = new System.Drawing.Point(216, 371);
-			this.textBox9.Name = "textBox9";
-			this.textBox9.Size = new System.Drawing.Size(54, 20);
-			this.textBox9.TabIndex = 44;
+			this.nonword_percentile.Location = new System.Drawing.Point(216, 371);
+			this.nonword_percentile.Name = "nonword_percentile";
+			this.nonword_percentile.Size = new System.Drawing.Size(54, 20);
+			this.nonword_percentile.TabIndex = 44;
 			// 
-			// textBox10
+			// nonword_box
 			// 
-			this.textBox10.Location = new System.Drawing.Point(130, 371);
-			this.textBox10.Name = "textBox10";
-			this.textBox10.Size = new System.Drawing.Size(54, 20);
-			this.textBox10.TabIndex = 45;
+			this.nonword_box.Location = new System.Drawing.Point(130, 371);
+			this.nonword_box.Name = "nonword_box";
+			this.nonword_box.Size = new System.Drawing.Size(54, 20);
+			this.nonword_box.TabIndex = 45;
 			// 
-			// textBox11
+			// memory_percentile
 			// 
-			this.textBox11.Location = new System.Drawing.Point(216, 326);
-			this.textBox11.Name = "textBox11";
-			this.textBox11.Size = new System.Drawing.Size(54, 20);
-			this.textBox11.TabIndex = 46;
+			this.memory_percentile.Location = new System.Drawing.Point(216, 326);
+			this.memory_percentile.Name = "memory_percentile";
+			this.memory_percentile.Size = new System.Drawing.Size(54, 20);
+			this.memory_percentile.TabIndex = 46;
 			// 
-			// textBox12
+			// memory_digit_box
 			// 
-			this.textBox12.Location = new System.Drawing.Point(130, 326);
-			this.textBox12.Name = "textBox12";
-			this.textBox12.Size = new System.Drawing.Size(54, 20);
-			this.textBox12.TabIndex = 47;
+			this.memory_digit_box.Location = new System.Drawing.Point(130, 326);
+			this.memory_digit_box.Name = "memory_digit_box";
+			this.memory_digit_box.Size = new System.Drawing.Size(54, 20);
+			this.memory_digit_box.TabIndex = 47;
 			// 
 			// textBox13
 			// 
@@ -450,47 +450,47 @@ namespace WindowsFormsApp2
 			this.textBox18.Size = new System.Drawing.Size(54, 20);
 			this.textBox18.TabIndex = 53;
 			// 
-			// textBox19
+			// ScaledSegmentingNonwords
 			// 
-			this.textBox19.Location = new System.Drawing.Point(301, 553);
-			this.textBox19.Name = "textBox19";
-			this.textBox19.Size = new System.Drawing.Size(54, 20);
-			this.textBox19.TabIndex = 54;
+			this.ScaledSegmentingNonwords.Location = new System.Drawing.Point(301, 553);
+			this.ScaledSegmentingNonwords.Name = "ScaledSegmentingNonwords";
+			this.ScaledSegmentingNonwords.Size = new System.Drawing.Size(54, 20);
+			this.ScaledSegmentingNonwords.TabIndex = 54;
 			// 
-			// textBox20
+			// PercentSegmentingNonwords
 			// 
-			this.textBox20.Location = new System.Drawing.Point(216, 553);
-			this.textBox20.Name = "textBox20";
-			this.textBox20.Size = new System.Drawing.Size(54, 20);
-			this.textBox20.TabIndex = 55;
+			this.PercentSegmentingNonwords.Location = new System.Drawing.Point(216, 553);
+			this.PercentSegmentingNonwords.Name = "PercentSegmentingNonwords";
+			this.PercentSegmentingNonwords.Size = new System.Drawing.Size(54, 20);
+			this.PercentSegmentingNonwords.TabIndex = 55;
 			// 
-			// textBox21
+			// RawSegmentingNonwords
 			// 
-			this.textBox21.Location = new System.Drawing.Point(130, 553);
-			this.textBox21.Name = "textBox21";
-			this.textBox21.Size = new System.Drawing.Size(54, 20);
-			this.textBox21.TabIndex = 56;
+			this.RawSegmentingNonwords.Location = new System.Drawing.Point(130, 553);
+			this.RawSegmentingNonwords.Name = "RawSegmentingNonwords";
+			this.RawSegmentingNonwords.Size = new System.Drawing.Size(54, 20);
+			this.RawSegmentingNonwords.TabIndex = 56;
 			// 
-			// textBox22
+			// scaledblendnonwords
 			// 
-			this.textBox22.Location = new System.Drawing.Point(301, 516);
-			this.textBox22.Name = "textBox22";
-			this.textBox22.Size = new System.Drawing.Size(54, 20);
-			this.textBox22.TabIndex = 57;
+			this.scaledblendnonwords.Location = new System.Drawing.Point(301, 516);
+			this.scaledblendnonwords.Name = "scaledblendnonwords";
+			this.scaledblendnonwords.Size = new System.Drawing.Size(54, 20);
+			this.scaledblendnonwords.TabIndex = 57;
 			// 
-			// textBox23
+			// percentblendnonwords
 			// 
-			this.textBox23.Location = new System.Drawing.Point(216, 516);
-			this.textBox23.Name = "textBox23";
-			this.textBox23.Size = new System.Drawing.Size(54, 20);
-			this.textBox23.TabIndex = 58;
+			this.percentblendnonwords.Location = new System.Drawing.Point(216, 516);
+			this.percentblendnonwords.Name = "percentblendnonwords";
+			this.percentblendnonwords.Size = new System.Drawing.Size(54, 20);
+			this.percentblendnonwords.TabIndex = 58;
 			// 
-			// textBox24
+			// rawblendnonwords
 			// 
-			this.textBox24.Location = new System.Drawing.Point(130, 516);
-			this.textBox24.Name = "textBox24";
-			this.textBox24.Size = new System.Drawing.Size(54, 20);
-			this.textBox24.TabIndex = 59;
+			this.rawblendnonwords.Location = new System.Drawing.Point(130, 516);
+			this.rawblendnonwords.Name = "rawblendnonwords";
+			this.rawblendnonwords.Size = new System.Drawing.Size(54, 20);
+			this.rawblendnonwords.TabIndex = 59;
 			// 
 			// label19
 			// 
@@ -532,24 +532,24 @@ namespace WindowsFormsApp2
 			this.Controls.Add(this.label21);
 			this.Controls.Add(this.label20);
 			this.Controls.Add(this.label19);
-			this.Controls.Add(this.textBox24);
-			this.Controls.Add(this.textBox23);
-			this.Controls.Add(this.textBox22);
-			this.Controls.Add(this.textBox21);
-			this.Controls.Add(this.textBox20);
-			this.Controls.Add(this.textBox19);
+			this.Controls.Add(this.rawblendnonwords);
+			this.Controls.Add(this.percentblendnonwords);
+			this.Controls.Add(this.scaledblendnonwords);
+			this.Controls.Add(this.RawSegmentingNonwords);
+			this.Controls.Add(this.PercentSegmentingNonwords);
+			this.Controls.Add(this.ScaledSegmentingNonwords);
 			this.Controls.Add(this.textBox18);
 			this.Controls.Add(this.textBox17);
 			this.Controls.Add(this.textBox16);
 			this.Controls.Add(this.textBox15);
 			this.Controls.Add(this.textBox14);
 			this.Controls.Add(this.textBox13);
-			this.Controls.Add(this.textBox12);
-			this.Controls.Add(this.textBox11);
-			this.Controls.Add(this.textBox10);
-			this.Controls.Add(this.textBox9);
-			this.Controls.Add(this.textBox8);
-			this.Controls.Add(this.textBox7);
+			this.Controls.Add(this.memory_digit_box);
+			this.Controls.Add(this.memory_percentile);
+			this.Controls.Add(this.nonword_box);
+			this.Controls.Add(this.nonword_percentile);
+			this.Controls.Add(this.nonword_scaled);
+			this.Controls.Add(this.memory_scaled);
 			this.Controls.Add(this.label18);
 			this.Controls.Add(this.label17);
 			this.Controls.Add(this.label16);
@@ -626,24 +626,24 @@ namespace WindowsFormsApp2
 		private System.Windows.Forms.Label label16;
 		private System.Windows.Forms.Label label17;
 		private System.Windows.Forms.Label label18;
-		private System.Windows.Forms.TextBox textBox7;
-		private System.Windows.Forms.TextBox textBox8;
-		private System.Windows.Forms.TextBox textBox9;
-		private System.Windows.Forms.TextBox textBox10;
-		private System.Windows.Forms.TextBox textBox11;
-		private System.Windows.Forms.TextBox textBox12;
+		private System.Windows.Forms.TextBox memory_scaled;
+		private System.Windows.Forms.TextBox nonword_scaled;
+		private System.Windows.Forms.TextBox nonword_percentile;
+		private System.Windows.Forms.TextBox nonword_box;
+		private System.Windows.Forms.TextBox memory_percentile;
+		private System.Windows.Forms.TextBox memory_digit_box;
 		private System.Windows.Forms.TextBox textBox13;
 		private System.Windows.Forms.TextBox textBox14;
 		private System.Windows.Forms.TextBox textBox15;
 		private System.Windows.Forms.TextBox textBox16;
 		private System.Windows.Forms.TextBox textBox17;
 		private System.Windows.Forms.TextBox textBox18;
-		private System.Windows.Forms.TextBox textBox19;
-		private System.Windows.Forms.TextBox textBox20;
-		private System.Windows.Forms.TextBox textBox21;
-		private System.Windows.Forms.TextBox textBox22;
-		private System.Windows.Forms.TextBox textBox23;
-		private System.Windows.Forms.TextBox textBox24;
+		private System.Windows.Forms.TextBox ScaledSegmentingNonwords;
+		private System.Windows.Forms.TextBox PercentSegmentingNonwords;
+		private System.Windows.Forms.TextBox RawSegmentingNonwords;
+		private System.Windows.Forms.TextBox scaledblendnonwords;
+		private System.Windows.Forms.TextBox percentblendnonwords;
+		private System.Windows.Forms.TextBox rawblendnonwords;
 		private System.Windows.Forms.Label label19;
 		private System.Windows.Forms.Label label20;
 		private System.Windows.Forms.Label label21;
