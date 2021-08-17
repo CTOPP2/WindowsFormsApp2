@@ -14,7 +14,7 @@ namespace WindowsFormsApp2
 {
 	public partial class Form1 : Form
 	{
-		static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=\\ac-dc2\student$\Year13\Samuel.Cuanang\GitHub\WindowsFormsApp2\WindowsFormsApp2\Database1.mdf;Integrated Security=True";
+		static string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True";
 			SqlConnection connection = new SqlConnection(connString);
 		
 		public Form1()
