@@ -34,12 +34,10 @@ namespace WindowsFormsApp2
 			this.Exam_Date = new System.Windows.Forms.DateTimePicker();
 			this.Birth_Year = new System.Windows.Forms.DateTimePicker();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
-			this.Out = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
-			this.label4 = new System.Windows.Forms.Label();
 			this.Month_age = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
@@ -103,14 +101,6 @@ namespace WindowsFormsApp2
 			this.Birth_Year.Size = new System.Drawing.Size(228, 20);
 			this.Birth_Year.TabIndex = 9;
 			// 
-			// Out
-			// 
-			this.Out.Location = new System.Drawing.Point(12, 125);
-			this.Out.Name = "Out";
-			this.Out.Size = new System.Drawing.Size(54, 20);
-			this.Out.TabIndex = 10;
-			this.Out.TextChanged += new System.EventHandler(this.Out_TextChanged);
-			// 
 			// button1
 			// 
 			this.button1.Location = new System.Drawing.Point(165, 122);
@@ -148,27 +138,18 @@ namespace WindowsFormsApp2
 			this.label3.TabIndex = 14;
 			this.label3.Text = "Age";
 			// 
-			// label4
-			// 
-			this.label4.AutoSize = true;
-			this.label4.Location = new System.Drawing.Point(12, 111);
-			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(29, 13);
-			this.label4.TabIndex = 15;
-			this.label4.Text = "Year";
-			// 
 			// Month_age
 			// 
-			this.Month_age.Location = new System.Drawing.Point(72, 125);
+			this.Month_age.Location = new System.Drawing.Point(12, 125);
 			this.Month_age.Name = "Month_age";
-			this.Month_age.Size = new System.Drawing.Size(54, 20);
+			this.Month_age.Size = new System.Drawing.Size(132, 20);
 			this.Month_age.TabIndex = 16;
 			this.Month_age.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
 			// 
 			// label5
 			// 
 			this.label5.AutoSize = true;
-			this.label5.Location = new System.Drawing.Point(72, 111);
+			this.label5.Location = new System.Drawing.Point(18, 109);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(37, 13);
 			this.label5.TabIndex = 17;
@@ -575,12 +556,10 @@ namespace WindowsFormsApp2
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.Month_age);
-			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.Out);
 			this.Controls.Add(this.Birth_Year);
 			this.Controls.Add(this.Exam_Date);
 			this.Name = "Form1";
@@ -595,12 +574,10 @@ namespace WindowsFormsApp2
 		private System.Windows.Forms.DateTimePicker Exam_Date;
 		private System.Windows.Forms.DateTimePicker Birth_Year;
 		private System.Windows.Forms.Timer timer1;
-		private System.Windows.Forms.TextBox Out;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox Month_age;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;

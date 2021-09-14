@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
@@ -64,23 +56,24 @@ namespace WindowsFormsApp2
 			long Month = (DayM - dobM);
 			long Day = (DayD - dobD);
 			//make dates math
-			if (Day<0)
+			if (Day < 0)
 			{
 				Month = Month - 1;
 			}
-			if (Month < 0)
-			{
-				Year = Year - 1;
-			}
+			long TotalMonth = Month + Year * 12;
+			//if (Month < 0)
+			//{
+			//	Year = Year - 1;
+			//}
 
-			long TMonth = (DayM - dobM);
-			if(TMonth<0)
-			{
-				TMonth = 12 + TMonth;
-			}
+			//long TMonth = (DayM - dobM);
+			//if(TMonth<0)
+			//{
+			//	TMonth = 12 + TMonth;
+			//}
 			//if statements cuz how time works
-			Month_age.Text = TMonth.ToString();
-			Out.Text = Year.ToString();
+			Month_age.Text = TotalMonth.ToString();
+			//Out.Text = Month.ToString();
 			//output
 
 		}
@@ -113,8 +106,9 @@ namespace WindowsFormsApp2
 			{
 				string elisionValue = this.Elision_raw_box.Text;
 				connection.Open();
-				String sql = "select percentiile_Rank,Elision,Scaled_Score from Elision where Elision = " + elisionValue;
-
+				
+				String sql = "select percentiile_Rank,Elision,Scaled_Score from Elision where Elision = " + elisionValue + "and " + Month_age.Text + " between min_months and max_months";
+				//select percentiile_Rank,Elision,Scaled_Score, min_months, max_months from Elision where Elision = 27 and 145 between min_months and max_months
 
 
 				SqlCommand command = new SqlCommand(sql, connection);
@@ -171,7 +165,7 @@ namespace WindowsFormsApp2
 			{
 				string blendedvalue = this.Blended_raw_box.Text;
 				connection.Open();
-				String sql = "select percenile_rank,Blending_Words,Scaled_Score from blendingwords where Blending_Words = " + blendedvalue;
+				String sql = "select percenile_rank,Blending_Words,Scaled_Score from blendingwords where Blending_Words = " + blendedvalue + "and " + Month_age.Text + " between min_months and max_months";
 
 
 
@@ -228,7 +222,8 @@ namespace WindowsFormsApp2
 			{
 				string phonemevalue = this.phoneme_box.Text;
 				connection.Open();
-				String sql = "select Percentile_Rank,Phoneme_Isolation,Scaled_Score from phoneme_iso where Phoneme_Isolation = " + phonemevalue;
+				String sql = "select Percentile_Rank,Phoneme_Isolation,Scaled_Score from phoneme_iso where Phoneme_Isolation = " + phonemevalue 
+					+ "and " + Month_age.Text + " between min_months and max_months";
 
 
 
@@ -285,7 +280,7 @@ namespace WindowsFormsApp2
 			{
 				string memory_for_digits = this.memory_digit_box.Text;
 				connection.Open();
-				String sql = "select Percentile_Rank,Memory_for_digits,Scaled_Score from memorydigits where Memory_for_digits = " + memory_for_digits;
+				String sql = "select Percentile_Rank,Memory_for_digits,Scaled_Score from memorydigits where Memory_for_digits = " + memory_for_digits + "and " + Month_age.Text + " between min_months and max_months";
 
 
 
@@ -342,7 +337,7 @@ namespace WindowsFormsApp2
 			{
 				string nonword_repitition = this.nonword_box.Text;
 				connection.Open();
-				String sql = "select Percentile_Rank,Nonword_Repitition,Scaled_Score from nonword_repitition where Nonword_Repitition = " + nonword_repitition;
+				String sql = "select Percentile_Rank,Nonword_Repitition,Scaled_Score from nonword_repitition where Nonword_Repitition = " + nonword_repitition + "and " + Month_age.Text + " between min_months and max_months";
 
 
 
@@ -400,7 +395,7 @@ namespace WindowsFormsApp2
 			{
 				string blending_nonwords = this.rawblendnonwords.Text;
 				connection.Open();
-				String sql = "select Percentile_Rank,Blending_Nonwords,Scaled_Score from blending_nonwords where Blending_Nonwords = " + blending_nonwords;
+				String sql = "select Percentile_Rank,Blending_Nonwords,Scaled_Score from blending_nonwords where Blending_Nonwords = " + blending_nonwords + "and " + Month_age.Text + " between min_months and max_months";
 
 
 
@@ -458,7 +453,7 @@ namespace WindowsFormsApp2
 			{
 				string Segmenting_Nonwords = this.RawSegmentingNonwords.Text;
 				connection.Open();
-				String sql = "select Percentile_Rank,Segmenting_Nonwords,Scaled_Score from segmenting_nonwords where Segmenting_Nonwords = " + Segmenting_Nonwords;
+				String sql = "select Percentile_Rank,Segmenting_Nonwords,Scaled_Score from segmenting_nonwords where Segmenting_Nonwords = " + Segmenting_Nonwords + "and " + Month_age.Text + " between min_months and max_months";
 
 
 
