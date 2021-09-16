@@ -69,9 +69,9 @@ namespace WindowsFormsApp2
 			this.nonword_box = new System.Windows.Forms.TextBox();
 			this.memory_percentile = new System.Windows.Forms.TextBox();
 			this.memory_digit_box = new System.Windows.Forms.TextBox();
-			this.textBox13 = new System.Windows.Forms.TextBox();
-			this.textBox14 = new System.Windows.Forms.TextBox();
-			this.textBox15 = new System.Windows.Forms.TextBox();
+			this.Rapid_score = new System.Windows.Forms.TextBox();
+			this.Rapid_percentille = new System.Windows.Forms.TextBox();
+			this.RapidDscore = new System.Windows.Forms.TextBox();
 			this.textBox16 = new System.Windows.Forms.TextBox();
 			this.textBox17 = new System.Windows.Forms.TextBox();
 			this.textBox18 = new System.Windows.Forms.TextBox();
@@ -389,26 +389,26 @@ namespace WindowsFormsApp2
 			this.memory_digit_box.Size = new System.Drawing.Size(54, 20);
 			this.memory_digit_box.TabIndex = 47;
 			// 
-			// textBox13
+			// Rapid_score
 			// 
-			this.textBox13.Location = new System.Drawing.Point(301, 417);
-			this.textBox13.Name = "textBox13";
-			this.textBox13.Size = new System.Drawing.Size(54, 20);
-			this.textBox13.TabIndex = 48;
+			this.Rapid_score.Location = new System.Drawing.Point(301, 417);
+			this.Rapid_score.Name = "Rapid_score";
+			this.Rapid_score.Size = new System.Drawing.Size(54, 20);
+			this.Rapid_score.TabIndex = 48;
 			// 
-			// textBox14
+			// Rapid_percentille
 			// 
-			this.textBox14.Location = new System.Drawing.Point(216, 417);
-			this.textBox14.Name = "textBox14";
-			this.textBox14.Size = new System.Drawing.Size(54, 20);
-			this.textBox14.TabIndex = 49;
+			this.Rapid_percentille.Location = new System.Drawing.Point(216, 417);
+			this.Rapid_percentille.Name = "Rapid_percentille";
+			this.Rapid_percentille.Size = new System.Drawing.Size(54, 20);
+			this.Rapid_percentille.TabIndex = 49;
 			// 
-			// textBox15
+			// RapidDscore
 			// 
-			this.textBox15.Location = new System.Drawing.Point(130, 417);
-			this.textBox15.Name = "textBox15";
-			this.textBox15.Size = new System.Drawing.Size(54, 20);
-			this.textBox15.TabIndex = 50;
+			this.RapidDscore.Location = new System.Drawing.Point(130, 417);
+			this.RapidDscore.Name = "RapidDscore";
+			this.RapidDscore.Size = new System.Drawing.Size(54, 20);
+			this.RapidDscore.TabIndex = 50;
 			// 
 			// textBox16
 			// 
@@ -522,9 +522,9 @@ namespace WindowsFormsApp2
 			this.Controls.Add(this.textBox18);
 			this.Controls.Add(this.textBox17);
 			this.Controls.Add(this.textBox16);
-			this.Controls.Add(this.textBox15);
-			this.Controls.Add(this.textBox14);
-			this.Controls.Add(this.textBox13);
+			this.Controls.Add(this.RapidDscore);
+			this.Controls.Add(this.Rapid_percentille);
+			this.Controls.Add(this.Rapid_score);
 			this.Controls.Add(this.memory_digit_box);
 			this.Controls.Add(this.memory_percentile);
 			this.Controls.Add(this.nonword_box);
@@ -609,9 +609,9 @@ namespace WindowsFormsApp2
 		private System.Windows.Forms.TextBox nonword_box;
 		private System.Windows.Forms.TextBox memory_percentile;
 		private System.Windows.Forms.TextBox memory_digit_box;
-		private System.Windows.Forms.TextBox textBox13;
-		private System.Windows.Forms.TextBox textBox14;
-		private System.Windows.Forms.TextBox textBox15;
+		private System.Windows.Forms.TextBox Rapid_score;
+		private System.Windows.Forms.TextBox Rapid_percentille;
+		private System.Windows.Forms.TextBox RapidDscore;
 		private System.Windows.Forms.TextBox textBox16;
 		private System.Windows.Forms.TextBox textBox17;
 		private System.Windows.Forms.TextBox textBox18;

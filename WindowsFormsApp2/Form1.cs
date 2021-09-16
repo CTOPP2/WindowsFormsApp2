@@ -505,6 +505,114 @@ namespace WindowsFormsApp2
 
 
 			}
+
+
+
+			//Rapid digit naming
+			try
+
+			{
+				string rapid_Digit_Naming = this.RapidDscore.Text;
+				connection.Open();
+				String sql = "select Percentile_Rank,Rapid_Digit_Naming,Scaled_Score from Rapid_digit_naming where Rapid_digit_naming = " + rapid_Digit_Naming + "and " + Month_age.Text + " between min_months and max_months";
+
+
+
+				SqlCommand command = new SqlCommand(sql, connection);
+
+
+
+				SqlDataReader reader = command.ExecuteReader();
+
+
+
+				if (reader.HasRows)
+
+				{
+
+					while (reader.Read())
+
+					{
+
+
+						string percentileRank = reader.GetString(0);
+						string phoneme = reader.GetString(1);
+						string Scaled_Score = reader.GetString(2);
+
+
+
+						Console.WriteLine("Rapid_digit_naming=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+						Rapid_percentille.Text = percentileRank;
+						Rapid_score.Text = Scaled_Score;
+						//Segmenting_Nonwords.Text = Segmenting_Nonwords;
+
+					}
+
+				} else
+				{
+					Console.WriteLine("No result for rapid digit naming");
+					// No rows found. We will look for max values
+					connection.Close();
+
+					connection.Open();
+
+					String sql2 = "select Percentile_Rank,Rapid_Digit_Naming,Scaled_Score from Rapid_digit_naming where " + Month_age.Text + " between min_months and max_months and is_max = 1";
+
+
+
+
+					SqlCommand command2 = new SqlCommand(sql2, connection);
+
+
+
+					SqlDataReader reader2 = command2.ExecuteReader();
+
+					Console.WriteLine("Did it crash?");
+
+					if (reader2.HasRows)
+
+					{
+
+						while (reader2.Read())
+
+						{
+
+
+							string percentileRank = reader2.GetString(0);
+							string phoneme = reader2.GetString(1);
+							string Scaled_Score = reader2.GetString(2);
+
+
+
+							Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+							Rapid_percentille.Text = percentileRank;
+							Rapid_score.Text = Scaled_Score;
+							//Segmenting_Nonwords.Text = Segmenting_Nonwords;
+
+						}
+
+					}
+					
+					
+				}
+				connection.Close();
+
+			}
+
+			catch (Exception err)
+
+			{
+
+
+				Console.WriteLine("Yes. Crashed");
+				MessageBox.Show(err.Message);
+
+
+
+			}
+
 		}
 
 		private void label11_Click(object sender, EventArgs e)
