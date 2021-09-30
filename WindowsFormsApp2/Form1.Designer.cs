@@ -72,9 +72,9 @@ namespace WindowsFormsApp2
 			this.Rapid_score = new System.Windows.Forms.TextBox();
 			this.Rapid_percentille = new System.Windows.Forms.TextBox();
 			this.RapidDscore = new System.Windows.Forms.TextBox();
-			this.textBox16 = new System.Windows.Forms.TextBox();
-			this.textBox17 = new System.Windows.Forms.TextBox();
-			this.textBox18 = new System.Windows.Forms.TextBox();
+			this.letter_score = new System.Windows.Forms.TextBox();
+			this.letter_naming = new System.Windows.Forms.TextBox();
+			this.rapidLscore = new System.Windows.Forms.TextBox();
 			this.ScaledSegmentingNonwords = new System.Windows.Forms.TextBox();
 			this.PercentSegmentingNonwords = new System.Windows.Forms.TextBox();
 			this.RawSegmentingNonwords = new System.Windows.Forms.TextBox();
@@ -410,26 +410,26 @@ namespace WindowsFormsApp2
 			this.RapidDscore.Size = new System.Drawing.Size(54, 20);
 			this.RapidDscore.TabIndex = 50;
 			// 
-			// textBox16
+			// letter_score
 			// 
-			this.textBox16.Location = new System.Drawing.Point(301, 460);
-			this.textBox16.Name = "textBox16";
-			this.textBox16.Size = new System.Drawing.Size(54, 20);
-			this.textBox16.TabIndex = 51;
+			this.letter_score.Location = new System.Drawing.Point(301, 460);
+			this.letter_score.Name = "letter_score";
+			this.letter_score.Size = new System.Drawing.Size(54, 20);
+			this.letter_score.TabIndex = 51;
 			// 
-			// textBox17
+			// letter_naming
 			// 
-			this.textBox17.Location = new System.Drawing.Point(216, 460);
-			this.textBox17.Name = "textBox17";
-			this.textBox17.Size = new System.Drawing.Size(54, 20);
-			this.textBox17.TabIndex = 52;
+			this.letter_naming.Location = new System.Drawing.Point(216, 460);
+			this.letter_naming.Name = "letter_naming";
+			this.letter_naming.Size = new System.Drawing.Size(54, 20);
+			this.letter_naming.TabIndex = 52;
 			// 
-			// textBox18
+			// rapidLscore
 			// 
-			this.textBox18.Location = new System.Drawing.Point(130, 460);
-			this.textBox18.Name = "textBox18";
-			this.textBox18.Size = new System.Drawing.Size(54, 20);
-			this.textBox18.TabIndex = 53;
+			this.rapidLscore.Location = new System.Drawing.Point(130, 460);
+			this.rapidLscore.Name = "rapidLscore";
+			this.rapidLscore.Size = new System.Drawing.Size(54, 20);
+			this.rapidLscore.TabIndex = 53;
 			// 
 			// ScaledSegmentingNonwords
 			// 
@@ -519,9 +519,9 @@ namespace WindowsFormsApp2
 			this.Controls.Add(this.RawSegmentingNonwords);
 			this.Controls.Add(this.PercentSegmentingNonwords);
 			this.Controls.Add(this.ScaledSegmentingNonwords);
-			this.Controls.Add(this.textBox18);
-			this.Controls.Add(this.textBox17);
-			this.Controls.Add(this.textBox16);
+			this.Controls.Add(this.rapidLscore);
+			this.Controls.Add(this.letter_naming);
+			this.Controls.Add(this.letter_score);
 			this.Controls.Add(this.RapidDscore);
 			this.Controls.Add(this.Rapid_percentille);
 			this.Controls.Add(this.Rapid_score);
@@ -612,9 +612,9 @@ namespace WindowsFormsApp2
 		private System.Windows.Forms.TextBox Rapid_score;
 		private System.Windows.Forms.TextBox Rapid_percentille;
 		private System.Windows.Forms.TextBox RapidDscore;
-		private System.Windows.Forms.TextBox textBox16;
-		private System.Windows.Forms.TextBox textBox17;
-		private System.Windows.Forms.TextBox textBox18;
+		private System.Windows.Forms.TextBox letter_score;
+		private System.Windows.Forms.TextBox letter_naming;
+		private System.Windows.Forms.TextBox rapidLscore;
 		private System.Windows.Forms.TextBox ScaledSegmentingNonwords;
 		private System.Windows.Forms.TextBox PercentSegmentingNonwords;
 		private System.Windows.Forms.TextBox RawSegmentingNonwords;
