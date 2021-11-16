@@ -89,8 +89,13 @@ namespace WindowsFormsApp2
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			// Elison
-			string elisionValue = this.Elision_raw_box.Text;
+
+			if (!string.IsNullOrEmpty(Month_age.Text))
+			{
+
+
+				// Elison
+				string elisionValue = this.Elision_raw_box.Text;
 
 			if (!string.IsNullOrEmpty(elisionValue)) { 
 				try
@@ -134,10 +139,61 @@ namespace WindowsFormsApp2
 
 						}
 
+
 					}
+					else
+					{
+						Console.WriteLine("No result for rapid digit naming");
+						// No rows found. We will look for max values
+						connection.Close();
+
+						connection.Open();
+						String sql2 = "select percentiile_Rank,Elision,Scaled_Score from Elision where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE' ";
+
+						//String sql2 = "select Percentile_Rank,Rapid_Digit_Naming,Scaled_Score from Rapid_digit_naming where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+
+
+
+						SqlCommand command2 = new SqlCommand(sql2, connection);
+
+
+
+						SqlDataReader reader2 = command2.ExecuteReader();
+
+						Console.WriteLine("Did it crash?");
+
+						if (reader2.HasRows)
+
+						{
+
+							while (reader2.Read())
+
+							{
+
+
+								string percentileRank = reader2.GetString(0);
+								string phoneme = reader2.GetString(1);
+								string Scaled_Score = reader2.GetString(2);
+
+
+
+								Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+								Percentile_rank_box.Text = percentileRank;
+								Scaled_score_box.Text = Scaled_Score;
+
+							}
+
+						}
+
+
+					}
+
 					connection.Close();
 
 				}
+				
 
 				catch (Exception err)
 
@@ -193,6 +249,53 @@ namespace WindowsFormsApp2
 							//Blending_Words.Text = Blending_Words;
 
 						}
+
+					}
+					else
+					{
+						Console.WriteLine("No result for rapid digit naming");
+						// No rows found. We will look for max values
+						connection.Close();
+
+						connection.Open();
+						String sql2 = "select percenile_rank,Blending_Words,Scaled_Score from blendingwords where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+						//String sql2 = "select Percentile_Rank,Rapid_Digit_Naming,Scaled_Score from Rapid_digit_naming where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+
+
+
+						SqlCommand command2 = new SqlCommand(sql2, connection);
+
+
+
+						SqlDataReader reader2 = command2.ExecuteReader();
+
+						Console.WriteLine("Did it crash?");
+
+						if (reader2.HasRows)
+
+						{
+
+							while (reader2.Read())
+
+							{
+
+
+								string percentileRank = reader2.GetString(0);
+								string phoneme = reader2.GetString(1);
+								string Scaled_Score = reader2.GetString(2);
+
+
+
+								Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+								blended_percentile.Text = percentileRank;
+								blended_scale.Text = Scaled_Score;
+							}
+
+						}
+
 
 					}
 					connection.Close();
@@ -261,6 +364,53 @@ namespace WindowsFormsApp2
 						}
 
 					}
+					else
+					{
+						Console.WriteLine("No result for rapid digit naming");
+						// No rows found. We will look for max values
+						connection.Close();
+
+						connection.Open();
+						String sql2 = "select Percentile_Rank,Phoneme_Isolation,Scaled_Score from phoneme_iso where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+						//String sql2 = "select Percentile_Rank,Rapid_Digit_Naming,Scaled_Score from Rapid_digit_naming where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+
+
+
+						SqlCommand command2 = new SqlCommand(sql2, connection);
+
+
+
+						SqlDataReader reader2 = command2.ExecuteReader();
+
+						Console.WriteLine("Did it crash?");
+
+						if (reader2.HasRows)
+
+						{
+
+							while (reader2.Read())
+
+							{
+
+
+								string percentileRank = reader2.GetString(0);
+								string phoneme = reader2.GetString(1);
+								string Scaled_Score = reader2.GetString(2);
+
+
+
+								Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+								phoneme_percentile.Text = percentileRank;
+								phoneme_scaled.Text = Scaled_Score;
+							}
+
+						}
+
+
+					}
 					connection.Close();
 
 				}
@@ -320,6 +470,52 @@ namespace WindowsFormsApp2
 							//Memory_for_digits_box.Text = Memory_for_digits;
 
 						}
+
+					}
+					else
+					{
+						Console.WriteLine("No result for rapid digit naming");
+						// No rows found. We will look for max values
+						connection.Close();
+
+						connection.Open();
+						String sql2 = "select Percentile_Rank,Memory_for_digits,Scaled_Score from memorydigits where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+						//String sql2 = "select Percentile_Rank,Rapid_Digit_Naming,Scaled_Score from Rapid_digit_naming where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+
+
+
+						SqlCommand command2 = new SqlCommand(sql2, connection);
+
+
+
+						SqlDataReader reader2 = command2.ExecuteReader();
+
+						Console.WriteLine("Did it crash?");
+
+						if (reader2.HasRows)
+
+						{
+
+							while (reader2.Read())
+
+							{
+
+
+								string percentileRank = reader2.GetString(0);
+								string phoneme = reader2.GetString(1);
+								string Scaled_Score = reader2.GetString(2);
+
+
+
+								Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+								memory_percentile.Text = percentileRank;
+								memory_scaled.Text = Scaled_Score;
+							}
+
+						}
+
 
 					}
 					connection.Close();
@@ -386,6 +582,56 @@ namespace WindowsFormsApp2
 						}
 
 					}
+					else
+					{
+						Console.WriteLine("No result for rapid digit naming");
+						// No rows found. We will look for max values
+						connection.Close();
+
+						connection.Open();
+						String sql2 = "select Percentile_Rank,Nonword_Repitition,Scaled_Score from nonword_repitition where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+						//String sql2 = "select Percentile_Rank,Rapid_Digit_Naming,Scaled_Score from Rapid_digit_naming where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+
+
+
+						SqlCommand command2 = new SqlCommand(sql2, connection);
+
+
+
+						SqlDataReader reader2 = command2.ExecuteReader();
+
+						Console.WriteLine("Did it crash?");
+
+						if (reader2.HasRows)
+
+						{
+
+							while (reader2.Read())
+
+							{
+
+
+								string percentileRank = reader2.GetString(0);
+								string phoneme = reader2.GetString(1);
+								string Scaled_Score = reader2.GetString(2);
+
+
+
+								Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+								nonword_percentile.Text = percentileRank;
+								nonword_scaled.Text = Scaled_Score;
+								//Segmenting_Nonwords.Text = Segmenting_Nonwords;
+
+							}
+
+						}
+
+
+					}
+
 					connection.Close();
 
 				}
@@ -404,7 +650,7 @@ namespace WindowsFormsApp2
 			}
 			//Blending_nonwords
 			string blending_nonwords = this.rawblendnonwords.Text;
-			if (!string.IsNullOrEmpty(nonword_repitition))
+			if (!string.IsNullOrEmpty(blending_nonwords))
 			{
 				try
 
@@ -446,6 +692,55 @@ namespace WindowsFormsApp2
 							//Blending_nonwords_box.Text = Blending_nonwords;
 
 						}
+
+					}
+					else
+					{
+						Console.WriteLine("No result for rapid digit naming");
+						// No rows found. We will look for max values
+						connection.Close();
+
+						connection.Open();
+						String sql2 = "select Percentile_Rank,Blending_Nonwords,Scaled_Score from blending_nonwords where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+						//String sql2 = "select Percentile_Rank,Rapid_Digit_Naming,Scaled_Score from Rapid_digit_naming where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+
+
+
+						SqlCommand command2 = new SqlCommand(sql2, connection);
+
+
+
+						SqlDataReader reader2 = command2.ExecuteReader();
+
+						Console.WriteLine("Did it crash?");
+
+						if (reader2.HasRows)
+
+						{
+
+							while (reader2.Read())
+
+							{
+
+
+								string percentileRank = reader2.GetString(0);
+								string phoneme = reader2.GetString(1);
+								string Scaled_Score = reader2.GetString(2);
+
+
+
+								Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+								percentblendnonwords.Text = percentileRank;
+								scaledblendnonwords.Text = Scaled_Score;
+								//Segmenting_Nonwords.Text = Segmenting_Nonwords;
+
+							}
+
+						}
+
 
 					}
 					connection.Close();
@@ -510,6 +805,56 @@ namespace WindowsFormsApp2
 						}
 
 					}
+					else
+					{
+						Console.WriteLine("No result for rapid digit naming");
+						// No rows found. We will look for max values
+						connection.Close();
+
+						connection.Open();
+						String sql2 = "select Percentile_Rank,Segmenting_Nonwords,Scaled_Score from segmenting_nonwords where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+						//String sql2 = "select Percentile_Rank,Rapid_Digit_Naming,Scaled_Score from Rapid_digit_naming where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+
+
+
+						SqlCommand command2 = new SqlCommand(sql2, connection);
+
+
+
+						SqlDataReader reader2 = command2.ExecuteReader();
+
+						Console.WriteLine("Did it crash?");
+
+						if (reader2.HasRows)
+
+						{
+
+							while (reader2.Read())
+
+							{
+
+
+								string percentileRank = reader2.GetString(0);
+								string phoneme = reader2.GetString(1);
+								string Scaled_Score = reader2.GetString(2);
+
+
+
+								Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+								PercentSegmentingNonwords.Text = percentileRank;
+								ScaledSegmentingNonwords.Text = Scaled_Score;
+								//Segmenting_Nonwords.Text = Segmenting_Nonwords;
+
+							}
+
+						}
+
+
+					}
+
 					connection.Close();
 
 				}
@@ -646,76 +991,37 @@ namespace WindowsFormsApp2
 				{
 					try
 
-				{
-					
-					connection.Open();
-					String sql = "select Percentile_Rank,Rapid_Letter_Naming,Scaled_Score from rapid_letter_naming where rapid_letter_naming = " + rapid_letter_naming + "and " + Month_age.Text + " between min_months and max_months";
-
-
-
-					SqlCommand command = new SqlCommand(sql, connection);
-
-
-
-					SqlDataReader reader = command.ExecuteReader();
-
-
-
-					if (reader.HasRows)
-
 					{
-
-						while (reader.Read())
-
-						{
-
-
-							string percentileRank = reader.GetString(0);
-							string phoneme = reader.GetString(1);
-							string Scaled_Score = reader.GetString(2);
-
-
-
-							Console.WriteLine("Rapid_digit_naming=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
-
-							letter_naming.Text = percentileRank;
-							letter_score.Text = Scaled_Score;
-							//Segmenting_Nonwords.Text = Segmenting_Nonwords;
-
-						}
-
-					}
-					else
-					{
-						Console.WriteLine("No result for rapid digit naming");
-						// No rows found. We will look for max values
-						connection.Close();
 
 						connection.Open();
+						String sql = "select Percentile_Rank,Rapid_Letter_Naming,Scaled_Score from rapid_letter_naming where rapid_letter_naming = " + rapid_letter_naming + "and " + Month_age.Text + " between min_months and max_months";
 
-						String sql2 = "select Percentile_Rank,Rapid_Letter_Naming,Scaled_Score from rapid_letter_naming where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
-						
-						SqlCommand command2 = new SqlCommand(sql2, connection);
 
-						SqlDataReader reader2 = command2.ExecuteReader();
 
-						Console.WriteLine("Did it crash?");
+						SqlCommand command = new SqlCommand(sql, connection);
 
-						if (reader2.HasRows)
+
+
+						SqlDataReader reader = command.ExecuteReader();
+
+
+
+						if (reader.HasRows)
 
 						{
 
-							while (reader2.Read())
+							while (reader.Read())
 
 							{
 
-								string percentileRank = reader2.GetString(0);
-								string phoneme = reader2.GetString(1);
-								string Scaled_Score = reader2.GetString(2);
+
+								string percentileRank = reader.GetString(0);
+								string phoneme = reader.GetString(1);
+								string Scaled_Score = reader.GetString(2);
 
 
 
-								Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+								Console.WriteLine("Rapid_digit_naming=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
 
 								letter_naming.Text = percentileRank;
 								letter_score.Text = Scaled_Score;
@@ -724,24 +1030,64 @@ namespace WindowsFormsApp2
 							}
 
 						}
+						else
+						{
+							Console.WriteLine("No result for rapid digit naming");
+							// No rows found. We will look for max values
+							connection.Close();
+
+							connection.Open();
+
+							String sql2 = "select Percentile_Rank,Rapid_Letter_Naming,Scaled_Score from rapid_letter_naming where " + Month_age.Text + " between min_months and max_months and is_max = 'TRUE'";
+
+							SqlCommand command2 = new SqlCommand(sql2, connection);
+
+							SqlDataReader reader2 = command2.ExecuteReader();
+
+							Console.WriteLine("Did it crash?");
+
+							if (reader2.HasRows)
+
+							{
+
+								while (reader2.Read())
+
+								{
+
+									string percentileRank = reader2.GetString(0);
+									string phoneme = reader2.GetString(1);
+									string Scaled_Score = reader2.GetString(2);
+
+
+
+									Console.WriteLine("Segmenting nonwords=" + phoneme + ";percentile Rank =" + percentileRank + ";scaled Score=" + Scaled_Score);
+
+									letter_naming.Text = percentileRank;
+									letter_score.Text = Scaled_Score;
+									//Segmenting_Nonwords.Text = Segmenting_Nonwords;
+
+								}
+
+							}
+
+
+						}
+						connection.Close();
+
+					}
+
+
+					catch (Exception err)
+
+					{
+
+
+						Console.WriteLine("Yes. Crashed");
+
+
 
 
 					}
-					connection.Close();
-
-				}
-
-
-				catch (Exception err)
-
-				{
-
-
-					Console.WriteLine("Yes. Crashed");
-
-
-
-
 				}
 			}
 		}
